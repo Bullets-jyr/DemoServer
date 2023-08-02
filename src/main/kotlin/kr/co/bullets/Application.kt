@@ -12,7 +12,7 @@ import kotlinx.serialization.Serializable
 import kotlin.Exception
 
 fun main() {
-    embeddedServer(Netty, port = 8080) {
+    embeddedServer(Netty, port = 8080, watchPaths = listOf("classes", "resources")) {
         install(ContentNegotiation) {
             json()
         }
@@ -63,6 +63,9 @@ fun Application.module() {
         }
         get("/moved") {
             call.respondText("You have been successfully redirected!")
+        }
+        get("/book") {
+            call.respondText("Book!")
         }
     }
 }
