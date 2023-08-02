@@ -1,6 +1,7 @@
 plugins {
     application
     kotlin("jvm") version "1.5.10"
+    kotlin("plugin.serialization") version "1.5.31"
 }
 
 group = "kr.co.bullets"
@@ -20,4 +21,5 @@ dependencies {
     implementation("io.ktor:ktor-server-core:1.6.4")
     implementation("io.ktor:ktor-server-netty:1.6.4")
     implementation("ch.qos.logback:logback-classic:1.2.5")
+    implementation("io.ktor:ktor-serialization:1.6.4")
 }
