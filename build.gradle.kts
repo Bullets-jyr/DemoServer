@@ -7,7 +7,7 @@ group = "kr.co.bullets"
 version = "0.0.1"
 
 application {
-    mainClass.set("io.ktor.server.netty.EngineMain")
+    mainClass.set("kr.co.bullets.ApplicationKt")
 }
 
 repositories {
