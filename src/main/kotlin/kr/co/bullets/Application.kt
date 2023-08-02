@@ -9,23 +9,28 @@ import io.ktor.server.netty.*
 fun main() {
     embeddedServer(Netty, port = 8080) {
         module()
-        module2()
+//        module2()
     }.start(wait = true)
 }
 
 fun Application.module() {
-    routing {
+//    routing {
+//        get("/") {
+//            call.respondText("Hello, World!")
+//        }
+//    }
+    install(Routing) {
         get("/") {
             call.respondText("Hello, World!")
         }
     }
 }
 
-fun Application.module2() {
-    routing {
-        get("/book") {
-            call.respondText("Hello, World 2!")
-        }
-    }
-}
+//fun Application.module2() {
+//    routing {
+//        get("/book") {
+//            call.respondText("Hello, World 2!")
+//        }
+//    }
+//}
 
